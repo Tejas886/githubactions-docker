@@ -2,7 +2,7 @@ name: Build-push-deployed
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "main" ]
 
 jobs:
   build:
