@@ -27,4 +27,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/githubactions-docker:latest
+          tags: |
+            tejasgowramma123/githubactions:latest
+            tejasgowramma123/githubactions:${{github.sha}}
+            tejasgowramma123/githubactions:${{github.run_number}}
