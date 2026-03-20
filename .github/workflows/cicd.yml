@@ -1,4 +1,4 @@
-name: Build java application  #any
+name: Build java application  
 
 on:
   push:
