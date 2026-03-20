@@ -3,7 +3,7 @@ name: Build java application
 on:
   push:
     branches:
-      - main   
+      - tejas   
 
 jobs:
   deploy:
