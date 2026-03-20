@@ -1,6 +1,6 @@
 FROM eclipse-temurin:17-jdk
 WORKDIR /app
 # This copies from the "build" stage above, not your computer
-COPY target/java-docker-app-1.0.0.jar app.jar
+COPY . .
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "app.jar"]
