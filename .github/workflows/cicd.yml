@@ -6,7 +6,7 @@ on:
       - main   
 
 jobs:
-  build-push-deploy:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,7 +19,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
 
-      - name: Build and Push Docker image
+      - name: Build docker images
         uses: docker/build-push-action@v3
         with:
           context: .
