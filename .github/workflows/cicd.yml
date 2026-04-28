@@ -2,6 +2,7 @@ name: list of all the s3 buckets
 
 on:
   workflow_dispatch:
+
 jobs:
   new-job:
     runs-on: ubuntu-latest
@@ -11,3 +12,9 @@ jobs:
         uses: actions/checkout@v3
 
       - name: aws creditals
+        run: |
+          export Aws_access=${{secrets.EC2_ACESS_KEY }}
+          export Aws_secrete=${{secrets.AWS_SECRETE}}
+
+          aws s3 ls
+        
